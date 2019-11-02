@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Plaine Morte",
+    "imgName": "PlaineMorte",
+    "difficulty": "difficult",
+    "vertical": 123.5,
+    "distance": 1.5
+  },
+  {
+    "id": 2,
+    "name": "Bella Lui",
+    "imgName": "BellaLui",
+    "difficulty": "intermediate",
+    "vertical": 233.5,
+    "distance": 7.3
+  },
+  {
+    "id": 3,
+    "name": "Les Planches",
+    "imgName": "LesPlanches",
+    "difficulty": "easy",
+    "vertical": 73.5,
+    "distance": 3.4
+  }
+]
