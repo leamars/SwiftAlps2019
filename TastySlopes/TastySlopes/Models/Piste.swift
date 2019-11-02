@@ -31,6 +31,26 @@ struct Piste: Codable, Identifiable {
   var difficulty: Difficulty
   var vertical: Double // Elevation
   var distance: Double // km
+  
+  static var random: Piste {
+    let pistes = Piste.pistes
+    let index = Int.random(in: 0 ..< 3)
+    return pistes[index]
+  }
+  
+  static var pistes: [Piste] {
+    guard let url = Bundle.main.url(forResource: "slopesData", withExtension: "json"),
+      let jsonData = try? Data(contentsOf: url) else {
+      fatalError("Failed to load data local file.")
+    }
+    
+    let decoder = JSONDecoder()
+    guard let decoded = try? decoder.decode([Piste].self, from: jsonData) else {
+      fatalError("Failed to decode data.")
+    }
+    
+    return decoded
+  }
 }
 
 struct Run {
@@ -38,7 +58,7 @@ struct Run {
   var speed: Double // 17.mph
   var date: Date
   
-  static var randomRun: Run {
+  static var random: Run {
     let time = Int.random(in: 300 ..< 1200)
     let speed = Double.random(in: 28.0 ..< 84)
     let date = Date()

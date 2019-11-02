@@ -11,6 +11,7 @@ import SwiftUI
 struct TastyView: View {
   var body: some View {
     Text("Hello, Tasty!")
+    .navigationBarTitle(Text("Tasty"))
   }
 }
 

@@ -10,6 +10,7 @@ import SwiftUI
 
 struct TabNavView: View {
   @State var selectedTab = 2
+  
   var body: some View {
     TabView(selection: $selectedTab) {
       
@@ -20,7 +21,7 @@ struct TabNavView: View {
       }.tag(0)
       
       NavigationView {
-        LogbookView()
+        logbookView
       }.tabItem {
         Text("Logbook")
       }.tag(1)
@@ -31,6 +32,11 @@ struct TabNavView: View {
         Text("Profile")
       }.tag(2)
     }
+  }
+  
+  private var logbookView: LogbookView {
+    let logbookVM = LogbookVM()
+    return LogbookView(logbookVM: logbookVM)
   }
 }
 

@@ -9,19 +9,38 @@
 import SwiftUI
 
 struct LogbookView: View {
+  
+  @ObservedObject var logbookVM: LogbookVM
+  
   var body: some View {
-    printLogs()
-    return Text("Hello, Logbook!")
+    return
+      VStack {
+        List {
+          ForEach(logbookVM.data, id: \.id) { model in
+            LogView(model: model)
+          }
+        }
+        addNewButton
+    }
+    .navigationBarTitle(Text("Logbook"))
   }
   
-  func printLogs() {
-    let vm = LogbookVM()
-    vm.populate()
+  private var addNewButton: some View {
+    Button(action: {
+      self.addNewRun()
+    }) {
+      AddRunView()
+    }
+  }
+  
+  private func addNewRun() {
+    logbookVM.addNew()
   }
 }
 
 struct LogbookView_Previews: PreviewProvider {
   static var previews: some View {
-    LogbookView()
+    let logbookVM = LogbookVM()
+    return LogbookView(logbookVM: logbookVM)
   }
 }

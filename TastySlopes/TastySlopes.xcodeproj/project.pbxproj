@@ -22,6 +22,12 @@
 		8BE3040B236E11B500EBDC44 /* Styleguide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE3040A236E11B500EBDC44 /* Styleguide.swift */; };
 		8BE3040D236E14C800EBDC44 /* LogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE3040C236E14C800EBDC44 /* LogView.swift */; };
 		8BE30410236E1FB300EBDC44 /* LogbookVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE3040F236E1FB300EBDC44 /* LogbookVM.swift */; };
+		8BE30414236E29C600EBDC44 /* AddRunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE30413236E29C600EBDC44 /* AddRunView.swift */; };
+		8BF1C428236E2AF800F310F0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1C427236E2AF800F310F0 /* Date+Extensions.swift */; };
+		8BF1C42A236E2FAD00F310F0 /* LogbookDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1C429236E2FAD00F310F0 /* LogbookDetailsView.swift */; };
+		8BF1C42D236E300700F310F0 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1C42C236E300700F310F0 /* ActivityIndicator.swift */; };
+		8BF1C42F236E302400F310F0 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1C42E236E302400F310F0 /* CameraVC.swift */; };
+		8BF1C433236E305B00F310F0 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1C432236E305B00F310F0 /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +48,12 @@
 		8BE3040A236E11B500EBDC44 /* Styleguide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styleguide.swift; sourceTree = "<group>"; };
 		8BE3040C236E14C800EBDC44 /* LogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogView.swift; sourceTree = "<group>"; };
 		8BE3040F236E1FB300EBDC44 /* LogbookVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogbookVM.swift; sourceTree = "<group>"; };
+		8BE30413236E29C600EBDC44 /* AddRunView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRunView.swift; sourceTree = "<group>"; };
+		8BF1C427236E2AF800F310F0 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		8BF1C429236E2FAD00F310F0 /* LogbookDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogbookDetailsView.swift; sourceTree = "<group>"; };
+		8BF1C42C236E300700F310F0 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		8BF1C42E236E302400F310F0 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
+		8BF1C432236E305B00F310F0 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +86,7 @@
 		8BE303E0236E010700EBDC44 /* TastySlopes */ = {
 			isa = PBXGroup;
 			children = (
+				8BF1C426236E2AE700F310F0 /* Helpers */,
 				8BE3040E236E1FA000EBDC44 /* ViewModels */,
 				8BE30404236E10E600EBDC44 /* UI */,
 				8BE303FF236E079100EBDC44 /* Models */,
@@ -108,6 +121,7 @@
 		8BE30404236E10E600EBDC44 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				8BF1C42B236E2FFB00F310F0 /* UIKit */,
 				8BE3040A236E11B500EBDC44 /* Styleguide.swift */,
 				8BE30409236E118A00EBDC44 /* Shared */,
 				8BE303F7236E05F300EBDC44 /* TabNavView.swift */,
@@ -115,6 +129,8 @@
 				8BE303FB236E068500EBDC44 /* LogbookView.swift */,
 				8BE303FD236E068D00EBDC44 /* ProfileView.swift */,
 				8BE3040C236E14C800EBDC44 /* LogView.swift */,
+				8BE30413236E29C600EBDC44 /* AddRunView.swift */,
+				8BF1C429236E2FAD00F310F0 /* LogbookDetailsView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -132,6 +148,24 @@
 				8BE3040F236E1FB300EBDC44 /* LogbookVM.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8BF1C426236E2AE700F310F0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8BF1C427236E2AF800F310F0 /* Date+Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8BF1C42B236E2FFB00F310F0 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				8BF1C42C236E300700F310F0 /* ActivityIndicator.swift */,
+				8BF1C42E236E302400F310F0 /* CameraVC.swift */,
+				8BF1C432236E305B00F310F0 /* SwiftUIView.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,13 +241,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BE303E2236E010700EBDC44 /* AppDelegate.swift in Sources */,
+				8BF1C42D236E300700F310F0 /* ActivityIndicator.swift in Sources */,
+				8BF1C433236E305B00F310F0 /* SwiftUIView.swift in Sources */,
 				8BE30403236E07BD00EBDC44 /* Piste.swift in Sources */,
 				8BE303E4236E010700EBDC44 /* SceneDelegate.swift in Sources */,
+				8BF1C428236E2AF800F310F0 /* Date+Extensions.swift in Sources */,
 				8BE3040D236E14C800EBDC44 /* LogView.swift in Sources */,
+				8BF1C42A236E2FAD00F310F0 /* LogbookDetailsView.swift in Sources */,
 				8BE30401236E07AB00EBDC44 /* User.swift in Sources */,
 				8BE30410236E1FB300EBDC44 /* LogbookVM.swift in Sources */,
 				8BE303F8236E05F300EBDC44 /* TabNavView.swift in Sources */,
 				8BE303FC236E068500EBDC44 /* LogbookView.swift in Sources */,
+				8BF1C42F236E302400F310F0 /* CameraVC.swift in Sources */,
+				8BE30414236E29C600EBDC44 /* AddRunView.swift in Sources */,
 				8BE303FE236E068D00EBDC44 /* ProfileView.swift in Sources */,
 				8BE303FA236E067700EBDC44 /* TastyView.swift in Sources */,
 				8BE3040B236E11B500EBDC44 /* Styleguide.swift in Sources */,

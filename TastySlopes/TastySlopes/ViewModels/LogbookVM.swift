@@ -10,25 +10,17 @@ import Foundation
 import SwiftUI
 import Combine
 
+struct LogModel: Identifiable {
+  var id: Date { return run.date }
+  var piste: Piste
+  var run: Run
+}
+
 class LogbookVM: ObservableObject {
-  var data: [Piste] = []
+  @Published var data: [LogModel] = []
   
-  init() {
-    populate()
-  }
-  
-  private func populate() {
-    
-    guard let url = Bundle.main.url(forResource: "slopesData", withExtension: "json"),
-      let jsonData = try? Data(contentsOf: url) else {
-      fatalError("Failed to load data local file.")
-    }
-    
-    let decoder = JSONDecoder()
-    guard let decoded = try? decoder.decode([Piste].self, from: jsonData) else {
-      fatalError("Failed to decode data.")
-    }
-    
-    data = decoded
+  func addNew() {
+    let randomModel = LogModel(piste: Piste.random, run: Run.random)
+    data.append(randomModel)
   }
 }
