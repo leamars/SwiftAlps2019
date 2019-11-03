@@ -10,6 +10,7 @@ import SwiftUI
 
 struct LogbookView: View {
   
+  @EnvironmentObject private var appState: AppState
   @EnvironmentObject var logbookVM: LogbookVM
   @State private var cameraPresented: Bool = false
   

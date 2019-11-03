@@ -32,4 +32,8 @@ extension UserDefaults {
       set(encoded, forKey: UserDefaultsKey.user.rawValue)
     }
   }
+  
+  func updateUser(newUser: User) {
+    saveUser(newUser: newUser)
+  }
 }

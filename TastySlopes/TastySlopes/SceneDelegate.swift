@@ -20,7 +20,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
     
     // Create the SwiftUI view that provides the window contents.
+    
+    let user = UserDefaults.standard.user
+    let tastyVM = TastyVM(user: user)
+    let appState = AppState()
     let contentView = TabNavView()
+      .environmentObject(tastyVM)
+      .environmentObject(appState)
     
     // Use a UIHostingController as window root view controller.
     if let windowScene = scene as? UIWindowScene {

@@ -14,8 +14,16 @@ enum Gender: String, CaseIterable, Codable {
   case male = "M 🙆🏽‍♂️"
   case nonConforming = "N 👻"
   
-  static var all: [String] {
+  static var allStrings: [String] {
     return [Gender.female, .male, .nonConforming].map { $0.rawValue }
+  }
+  
+  var index: Int {
+    switch self {
+      case .female: return 0
+      case .male: return 1
+      case .nonConforming: return 2
+    }
   }
   
   var k: Double {
@@ -61,6 +69,18 @@ struct User: Codable {
   var weight: Int
   var height: Int
   var runs: Int // Num of runs
-  var timeOnRuns: Int // Seconds
-  var lifetimeVertical: Int  
+  var timeOnRuns: Double // Seconds
+  var lifetimeVertical: Double
+  var activeLifestyle: Bool
+ 
+  var maintenanceCalories: Int {
+    let bmr = gender.k + (gender.weightMult * Double(weight)) + (gender.heightMult * Double(height)) + (gender.ageMult * Double(age))
+    let activityMultiplier = activeLifestyle ? 1.25 : 1.0
+    
+    return Int(bmr * activityMultiplier)
+  }
+  
+  static var emptyUser: User {
+    return User(gender: .nonConforming, age: 0, weight: 0, height: 0, runs: 0, timeOnRuns: 0, lifetimeVertical: 0, activeLifestyle: false)
+  }
 }
