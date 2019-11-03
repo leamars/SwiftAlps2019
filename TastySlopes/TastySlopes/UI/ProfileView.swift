@@ -20,7 +20,7 @@ struct ProfileView: View {
     return Form {
       Section(header: Text("Personal Info")) {
         Picker(selection: $profileVM.gender, label: Text("Select a color")) {
-          ForEach(0 ..< profileVM.ageStr.count) {
+          ForEach(0 ..< profileVM.allGenders.count) {
             Text(self.profileVM.allGenders[$0]).tag($0)
           }
         }
@@ -44,6 +44,16 @@ struct ProfileView: View {
           self.dismissKeyboard()
         }) {
           Text("Update profile")
+        }
+      }
+      
+      Section {
+        List {
+          NavigationLink(destination:
+            PrivacyPolicyView())
+          {
+            Text("Privacy Policy")
+          }
         }
       }
     }

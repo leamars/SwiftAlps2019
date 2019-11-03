@@ -8,18 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		8BDD4CE4236EFA5200579094 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDD4CE3236EFA5200579094 /* UserDefaults+Extensions.swift */; };
-		8BDD4CE6236F01C500579094 /* TastyVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDD4CE5236F01C500579094 /* TastyVM.swift */; };
+		8BDD4CE6236F01C500579094 /* TreatsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDD4CE5236F01C500579094 /* TreatsVM.swift */; };
 		8BDD4CE8236F038700579094 /* Calories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDD4CE7236F038700579094 /* Calories.swift */; };
 		8BDD4CEA236F0E5A00579094 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDD4CE9236F0E5A00579094 /* AppState.swift */; };
 		8BDD4CEC236F15D100579094 /* ProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDD4CEB236F15D100579094 /* ProfileVM.swift */; };
 		8BDD4CEE236F337B00579094 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDD4CED236F337B00579094 /* Array+Extensions.swift */; };
+		8BDD4CF0236F381700579094 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDD4CEF236F381700579094 /* PrivacyPolicyView.swift */; };
 		8BE303E2236E010700EBDC44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE303E1236E010700EBDC44 /* AppDelegate.swift */; };
 		8BE303E4236E010700EBDC44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE303E3236E010700EBDC44 /* SceneDelegate.swift */; };
 		8BE303E8236E010900EBDC44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BE303E7236E010900EBDC44 /* Assets.xcassets */; };
 		8BE303EB236E010900EBDC44 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BE303EA236E010900EBDC44 /* Preview Assets.xcassets */; };
 		8BE303EE236E010900EBDC44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BE303EC236E010900EBDC44 /* LaunchScreen.storyboard */; };
 		8BE303F8236E05F300EBDC44 /* TabNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE303F7236E05F300EBDC44 /* TabNavView.swift */; };
-		8BE303FA236E067700EBDC44 /* TastyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE303F9236E067700EBDC44 /* TastyView.swift */; };
+		8BE303FA236E067700EBDC44 /* TreatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE303F9236E067700EBDC44 /* TreatsView.swift */; };
 		8BE303FC236E068500EBDC44 /* LogbookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE303FB236E068500EBDC44 /* LogbookView.swift */; };
 		8BE303FE236E068D00EBDC44 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE303FD236E068D00EBDC44 /* ProfileView.swift */; };
 		8BE30401236E07AB00EBDC44 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE30400236E07AB00EBDC44 /* User.swift */; };
@@ -38,11 +39,12 @@
 
 /* Begin PBXFileReference section */
 		8BDD4CE3236EFA5200579094 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
-		8BDD4CE5236F01C500579094 /* TastyVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastyVM.swift; sourceTree = "<group>"; };
+		8BDD4CE5236F01C500579094 /* TreatsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatsVM.swift; sourceTree = "<group>"; };
 		8BDD4CE7236F038700579094 /* Calories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calories.swift; sourceTree = "<group>"; };
 		8BDD4CE9236F0E5A00579094 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		8BDD4CEB236F15D100579094 /* ProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVM.swift; sourceTree = "<group>"; };
 		8BDD4CED236F337B00579094 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		8BDD4CEF236F381700579094 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
 		8BE303DE236E010700EBDC44 /* TastySlopes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TastySlopes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE303E1236E010700EBDC44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BE303E3236E010700EBDC44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,7 +53,7 @@
 		8BE303ED236E010900EBDC44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BE303EF236E010900EBDC44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BE303F7236E05F300EBDC44 /* TabNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavView.swift; sourceTree = "<group>"; };
-		8BE303F9236E067700EBDC44 /* TastyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastyView.swift; sourceTree = "<group>"; };
+		8BE303F9236E067700EBDC44 /* TreatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatsView.swift; sourceTree = "<group>"; };
 		8BE303FB236E068500EBDC44 /* LogbookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogbookView.swift; sourceTree = "<group>"; };
 		8BE303FD236E068D00EBDC44 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		8BE30400236E07AB00EBDC44 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -139,12 +141,13 @@
 				8BE3040A236E11B500EBDC44 /* Styleguide.swift */,
 				8BE30409236E118A00EBDC44 /* Shared */,
 				8BE303F7236E05F300EBDC44 /* TabNavView.swift */,
-				8BE303F9236E067700EBDC44 /* TastyView.swift */,
+				8BE303F9236E067700EBDC44 /* TreatsView.swift */,
 				8BE303FB236E068500EBDC44 /* LogbookView.swift */,
 				8BE303FD236E068D00EBDC44 /* ProfileView.swift */,
 				8BE3040C236E14C800EBDC44 /* LogView.swift */,
 				8BE30413236E29C600EBDC44 /* AddRunView.swift */,
 				8BF1C429236E2FAD00F310F0 /* LogbookDetailsView.swift */,
+				8BDD4CEF236F381700579094 /* PrivacyPolicyView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -160,7 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				8BE3040F236E1FB300EBDC44 /* LogbookVM.swift */,
-				8BDD4CE5236F01C500579094 /* TastyVM.swift */,
+				8BDD4CE5236F01C500579094 /* TreatsVM.swift */,
 				8BDD4CEB236F15D100579094 /* ProfileVM.swift */,
 			);
 			path = ViewModels;
@@ -261,6 +264,7 @@
 				8BE303E2236E010700EBDC44 /* AppDelegate.swift in Sources */,
 				8BF1C42D236E300700F310F0 /* ActivityIndicator.swift in Sources */,
 				8BF1C433236E305B00F310F0 /* TakePhotoView.swift in Sources */,
+				8BDD4CF0236F381700579094 /* PrivacyPolicyView.swift in Sources */,
 				8BF1C435236E310800F310F0 /* CameraView.swift in Sources */,
 				8BE30403236E07BD00EBDC44 /* Piste.swift in Sources */,
 				8BE303E4236E010700EBDC44 /* SceneDelegate.swift in Sources */,
@@ -269,7 +273,7 @@
 				8BE3040D236E14C800EBDC44 /* LogView.swift in Sources */,
 				8BF1C42A236E2FAD00F310F0 /* LogbookDetailsView.swift in Sources */,
 				8BDD4CEA236F0E5A00579094 /* AppState.swift in Sources */,
-				8BDD4CE6236F01C500579094 /* TastyVM.swift in Sources */,
+				8BDD4CE6236F01C500579094 /* TreatsVM.swift in Sources */,
 				8BE30401236E07AB00EBDC44 /* User.swift in Sources */,
 				8BDD4CE4236EFA5200579094 /* UserDefaults+Extensions.swift in Sources */,
 				8BE30410236E1FB300EBDC44 /* LogbookVM.swift in Sources */,
@@ -279,7 +283,7 @@
 				8BDD4CE8236F038700579094 /* Calories.swift in Sources */,
 				8BE30414236E29C600EBDC44 /* AddRunView.swift in Sources */,
 				8BE303FE236E068D00EBDC44 /* ProfileView.swift in Sources */,
-				8BE303FA236E067700EBDC44 /* TastyView.swift in Sources */,
+				8BE303FA236E067700EBDC44 /* TreatsView.swift in Sources */,
 				8BE3040B236E11B500EBDC44 /* Styleguide.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

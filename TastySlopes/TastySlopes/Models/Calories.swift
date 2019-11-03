@@ -9,8 +9,8 @@
 import Foundation
 
 enum Treat: String {
-  case toblerone
-  case swissCheese
+  case toblerone = "Toblerone"
+  case swissCheese = "Swiss Cheese"
   
   // Caloories/100g
   var calories: Int {

@@ -10,16 +10,16 @@ import SwiftUI
 
 struct TabNavView: View {
   @EnvironmentObject private var appState: AppState
-  @EnvironmentObject private var tastyVM: TastyVM
+  @EnvironmentObject private var treatsVM: TreatsVM
   private var logbookVM = LogbookVM()
   
   var body: some View {
     TabView(selection: $appState.selectedTab) {
       
       NavigationView {
-        tastyView
+        treatsView
       }.tabItem {
-        Text("Tasty")
+        Text("Treats")
       }.tag(0)
       
       NavigationView {
@@ -44,8 +44,8 @@ struct TabNavView: View {
     return ProfileView(profileVM: ProfileVM(user: appState.user))
   }
   
-  private var tastyView: some View {    
-    return TastyView(tastyVM: tastyVM).environmentObject(appState)
+  private var treatsView: some View {
+    return TreatsView(treatsVM: treatsVM).environmentObject(appState)
   }
 }
 

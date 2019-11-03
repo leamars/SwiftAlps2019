@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // Create the SwiftUI view that provides the window contents.
     
     let user = UserDefaults.standard.user
-    let tastyVM = TastyVM(user: user)
+    let tastyVM = TreatsVM(user: user)
     let appState = AppState()
     let contentView = TabNavView()
       .environmentObject(tastyVM)
