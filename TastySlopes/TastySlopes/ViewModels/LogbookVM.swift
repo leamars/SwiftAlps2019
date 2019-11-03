@@ -10,6 +10,13 @@ import Foundation
 import SwiftUI
 import Combine
 
+enum DataState {
+  case initial
+  case loading
+  case hasData
+  case failed
+}
+
 struct LogModel: Identifiable {
   var id: Date { return run.date }
   var piste: Piste
@@ -18,9 +25,19 @@ struct LogModel: Identifiable {
 
 class LogbookVM: ObservableObject {
   @Published var data: [LogModel] = []
+  private lazy var pistes = Piste.pistes
+  private (set) var state: DataState = .initial
   
-  func addNew() {
+  func addRandom() {
     let randomModel = LogModel(piste: Piste.random, run: Run.random)
     data.append(randomModel)
+  }
+  
+  func logPiste(with id: Int) {
+    let piste = pistes.filter { $0.id == id }.first!
+    let run = Run.random
+    let model = LogModel(piste: piste, run: run)
+    
+    data.append(model)
   }
 }

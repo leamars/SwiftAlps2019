@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct TabNavView: View {
+  
   @State var selectedTab = 2
   
   var body: some View {
@@ -34,9 +35,9 @@ struct TabNavView: View {
     }
   }
   
-  private var logbookView: LogbookView {
+  private var logbookView: some View {
     let logbookVM = LogbookVM()
-    return LogbookView(logbookVM: logbookVM)
+    return LogbookView().environmentObject(logbookVM)
   }
 }
 

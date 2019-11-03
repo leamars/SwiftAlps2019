@@ -26,8 +26,8 @@
 		8BF1C428236E2AF800F310F0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1C427236E2AF800F310F0 /* Date+Extensions.swift */; };
 		8BF1C42A236E2FAD00F310F0 /* LogbookDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1C429236E2FAD00F310F0 /* LogbookDetailsView.swift */; };
 		8BF1C42D236E300700F310F0 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1C42C236E300700F310F0 /* ActivityIndicator.swift */; };
-		8BF1C42F236E302400F310F0 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1C42E236E302400F310F0 /* CameraVC.swift */; };
-		8BF1C433236E305B00F310F0 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1C432236E305B00F310F0 /* SwiftUIView.swift */; };
+		8BF1C433236E305B00F310F0 /* TakePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1C432236E305B00F310F0 /* TakePhotoView.swift */; };
+		8BF1C435236E310800F310F0 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF1C434236E310800F310F0 /* CameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,8 +52,8 @@
 		8BF1C427236E2AF800F310F0 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		8BF1C429236E2FAD00F310F0 /* LogbookDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogbookDetailsView.swift; sourceTree = "<group>"; };
 		8BF1C42C236E300700F310F0 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
-		8BF1C42E236E302400F310F0 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
-		8BF1C432236E305B00F310F0 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		8BF1C432236E305B00F310F0 /* TakePhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoView.swift; sourceTree = "<group>"; };
+		8BF1C434236E310800F310F0 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,8 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				8BF1C42C236E300700F310F0 /* ActivityIndicator.swift */,
-				8BF1C42E236E302400F310F0 /* CameraVC.swift */,
-				8BF1C432236E305B00F310F0 /* SwiftUIView.swift */,
+				8BF1C432236E305B00F310F0 /* TakePhotoView.swift */,
+				8BF1C434236E310800F310F0 /* CameraView.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -242,7 +242,8 @@
 			files = (
 				8BE303E2236E010700EBDC44 /* AppDelegate.swift in Sources */,
 				8BF1C42D236E300700F310F0 /* ActivityIndicator.swift in Sources */,
-				8BF1C433236E305B00F310F0 /* SwiftUIView.swift in Sources */,
+				8BF1C433236E305B00F310F0 /* TakePhotoView.swift in Sources */,
+				8BF1C435236E310800F310F0 /* CameraView.swift in Sources */,
 				8BE30403236E07BD00EBDC44 /* Piste.swift in Sources */,
 				8BE303E4236E010700EBDC44 /* SceneDelegate.swift in Sources */,
 				8BF1C428236E2AF800F310F0 /* Date+Extensions.swift in Sources */,
@@ -252,7 +253,6 @@
 				8BE30410236E1FB300EBDC44 /* LogbookVM.swift in Sources */,
 				8BE303F8236E05F300EBDC44 /* TabNavView.swift in Sources */,
 				8BE303FC236E068500EBDC44 /* LogbookView.swift in Sources */,
-				8BF1C42F236E302400F310F0 /* CameraVC.swift in Sources */,
 				8BE30414236E29C600EBDC44 /* AddRunView.swift in Sources */,
 				8BE303FE236E068D00EBDC44 /* ProfileView.swift in Sources */,
 				8BE303FA236E067700EBDC44 /* TastyView.swift in Sources */,

@@ -13,7 +13,6 @@ struct LogView: View {
   
   var body: some View {
     HStack(alignment: .top) {
-      Spacer()
       
       Image("\(model.piste.imgName)")
         .resizable()

@@ -10,7 +10,8 @@ import SwiftUI
 
 struct LogbookView: View {
   
-  @ObservedObject var logbookVM: LogbookVM
+  @EnvironmentObject var logbookVM: LogbookVM
+  @State private var cameraPresented: Bool = false
   
   var body: some View {
     return
@@ -19,28 +20,39 @@ struct LogbookView: View {
           ForEach(logbookVM.data, id: \.id) { model in
             LogView(model: model)
           }
+          .onDelete(perform: self.delete)
         }
         addNewButton
     }
     .navigationBarTitle(Text("Logbook"))
+    .sheet(isPresented: $cameraPresented) {
+      // ISSUE (1): Not sure why we need to pass the environment object (maybe because this is not technically a "child", but a sheet/modifier?)
+      CameraView(isPresented: self.cameraPresented).environmentObject(self.logbookVM)
+    }
   }
   
   private var addNewButton: some View {
     Button(action: {
-      self.addNewRun()
+      //sself.cameraPresented = true
+      self.addRandomRun()
     }) {
       AddRunView()
     }
   }
   
-  private func addNewRun() {
-    logbookVM.addNew()
+  private func addRandomRun() {
+    logbookVM.addRandom()
+  }
+  
+  private func delete(indexSet: IndexSet) {
+    guard let index = indexSet.first else { return }
+    logbookVM.data.remove(at: index)
   }
 }
 
 struct LogbookView_Previews: PreviewProvider {
   static var previews: some View {
     let logbookVM = LogbookVM()
-    return LogbookView(logbookVM: logbookVM)
+    return LogbookView().environmentObject(logbookVM)
   }
 }
