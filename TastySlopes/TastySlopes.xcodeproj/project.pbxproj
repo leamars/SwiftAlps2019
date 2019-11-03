@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8BDD4CE4236EFA5200579094 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDD4CE3236EFA5200579094 /* UserDefaults+Extensions.swift */; };
 		8BE303E2236E010700EBDC44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE303E1236E010700EBDC44 /* AppDelegate.swift */; };
 		8BE303E4236E010700EBDC44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE303E3236E010700EBDC44 /* SceneDelegate.swift */; };
 		8BE303E8236E010900EBDC44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BE303E7236E010900EBDC44 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8BDD4CE3236EFA5200579094 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
 		8BE303DE236E010700EBDC44 /* TastySlopes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TastySlopes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE303E1236E010700EBDC44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BE303E3236E010700EBDC44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				8BF1C427236E2AF800F310F0 /* Date+Extensions.swift */,
+				8BDD4CE3236EFA5200579094 /* UserDefaults+Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				8BE3040D236E14C800EBDC44 /* LogView.swift in Sources */,
 				8BF1C42A236E2FAD00F310F0 /* LogbookDetailsView.swift in Sources */,
 				8BE30401236E07AB00EBDC44 /* User.swift in Sources */,
+				8BDD4CE4236EFA5200579094 /* UserDefaults+Extensions.swift in Sources */,
 				8BE30410236E1FB300EBDC44 /* LogbookVM.swift in Sources */,
 				8BE303F8236E05F300EBDC44 /* TabNavView.swift in Sources */,
 				8BE303FC236E068500EBDC44 /* LogbookView.swift in Sources */,

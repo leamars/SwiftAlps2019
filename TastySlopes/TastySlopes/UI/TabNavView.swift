@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct TabNavView: View {
-  
   @State var selectedTab = 2
   
   var body: some View {
