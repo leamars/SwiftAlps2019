@@ -74,6 +74,8 @@ struct User: Codable {
   var activeLifestyle: Bool
  
   var maintenanceCalories: Int {
+    guard weight != 0, height != 0, age != 0 else { return 0 }
+    
     let bmr = gender.k + (gender.weightMult * Double(weight)) + (gender.heightMult * Double(height)) + (gender.ageMult * Double(age))
     let activityMultiplier = activeLifestyle ? 1.25 : 1.0
     

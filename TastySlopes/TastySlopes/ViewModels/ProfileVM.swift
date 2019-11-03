@@ -41,8 +41,7 @@ class ProfileVM: ObservableObject {
       let weight = Int(weightStr),
       let height = Int(heightStr),
       let age = Int(ageStr) else {
-        // Show alert instead
-        fatalError("You did not give me all the needed details!")
+        return nil
     }
     
     let user = User(gender: gender, age: age, weight: weight, height: height, runs: 0, timeOnRuns: 0, lifetimeVertical: 0, activeLifestyle: activeLifestyle)

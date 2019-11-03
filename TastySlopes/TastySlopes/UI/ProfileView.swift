@@ -14,9 +14,8 @@ struct ProfileView: View {
     
   @State private var selectedUnits = 0
   @State private var measurementSystems = ["Metric", "Imperial"]
-  
-  @State private var isMetricSystem = true
-  
+  @State var showingMissingDetailsAlert = false
+    
   var body: some View {
     return Form {
       Section(header: Text("Personal Info")) {
@@ -49,6 +48,9 @@ struct ProfileView: View {
       }
     }
     .navigationBarTitle(Text("Profile"))
+    .alert(isPresented: $showingMissingDetailsAlert) {
+      missingDetailsAlert
+    }
   }
   
   private var unitsHeader: some View {
@@ -88,10 +90,21 @@ struct ProfileView: View {
     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     
     guard let user = profileVM.newUser() else {
-      //TODO: Show Alert
+      showingMissingDetailsAlert.toggle()
       return
     }
     appState.updateUser(updatedUser: user)
+  }
+  
+  private var missingDetailsAlert: Alert {
+    return Alert(
+      title: Text("Missing details!"),
+      message: Text("Make sure to fill out all your details, otherwise we can't calculate your recommended daily caloric intake."),
+      dismissButton:
+        .default(Text("OK"), action: {
+          self.showingMissingDetailsAlert.toggle()
+        })
+    )
   }
 }
 

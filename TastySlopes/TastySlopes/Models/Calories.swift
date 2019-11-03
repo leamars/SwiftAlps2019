@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum CaloryTypes {
+enum Treat: String {
   case toblerone
   case swissCheese
   
@@ -17,6 +17,13 @@ enum CaloryTypes {
     switch self {
       case .toblerone: return 528
       case .swissCheese: return 380
+    }
+  }
+  
+  var img: String {
+    switch self {
+      case .toblerone: return "toblerone"
+      case .swissCheese: return "cheese"
     }
   }
 }
