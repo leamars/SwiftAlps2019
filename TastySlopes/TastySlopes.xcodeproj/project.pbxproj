@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8BC2BCAB23892DB30040BAE9 /* PisteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC2BCAA23892DB30040BAE9 /* PisteView.swift */; };
+		8BC2BCAD23892DCB0040BAE9 /* ScanQRButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC2BCAC23892DCB0040BAE9 /* ScanQRButton.swift */; };
+		8BC2BCAF23893DBB0040BAE9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC2BCAE23893DBB0040BAE9 /* Colors.swift */; };
 		8BDD4CE4236EFA5200579094 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDD4CE3236EFA5200579094 /* UserDefaults+Extensions.swift */; };
 		8BDD4CE6236F01C500579094 /* TreatsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDD4CE5236F01C500579094 /* TreatsVM.swift */; };
 		8BDD4CE8236F038700579094 /* Calories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDD4CE7236F038700579094 /* Calories.swift */; };
@@ -38,6 +41,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8BC2BCAA23892DB30040BAE9 /* PisteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PisteView.swift; sourceTree = "<group>"; };
+		8BC2BCAC23892DCB0040BAE9 /* ScanQRButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRButton.swift; sourceTree = "<group>"; };
+		8BC2BCAE23893DBB0040BAE9 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8BDD4CE3236EFA5200579094 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
 		8BDD4CE5236F01C500579094 /* TreatsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatsVM.swift; sourceTree = "<group>"; };
 		8BDD4CE7236F038700579094 /* Calories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calories.swift; sourceTree = "<group>"; };
@@ -142,7 +148,6 @@
 				8BE30409236E118A00EBDC44 /* Shared */,
 				8BE303F7236E05F300EBDC44 /* TabNavView.swift */,
 				8BE303F9236E067700EBDC44 /* TreatsView.swift */,
-				8BE303FB236E068500EBDC44 /* LogbookView.swift */,
 				8BE303FD236E068D00EBDC44 /* ProfileView.swift */,
 				8BE3040C236E14C800EBDC44 /* LogView.swift */,
 				8BE30413236E29C600EBDC44 /* AddRunView.swift */,
@@ -155,6 +160,8 @@
 		8BE30409236E118A00EBDC44 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				8BC2BCAA23892DB30040BAE9 /* PisteView.swift */,
+				8BC2BCAC23892DCB0040BAE9 /* ScanQRButton.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -175,6 +182,7 @@
 				8BF1C427236E2AF800F310F0 /* Date+Extensions.swift */,
 				8BDD4CE3236EFA5200579094 /* UserDefaults+Extensions.swift */,
 				8BDD4CED236F337B00579094 /* Array+Extensions.swift */,
+				8BC2BCAE23893DBB0040BAE9 /* Colors.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -184,6 +192,7 @@
 			children = (
 				8BF1C42C236E300700F310F0 /* ActivityIndicator.swift */,
 				8BF1C432236E305B00F310F0 /* TakePhotoView.swift */,
+				8BE303FB236E068500EBDC44 /* LogbookView.swift */,
 				8BF1C434236E310800F310F0 /* CameraView.swift */,
 			);
 			path = UIKit;
@@ -262,13 +271,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BE303E2236E010700EBDC44 /* AppDelegate.swift in Sources */,
+				8BC2BCAB23892DB30040BAE9 /* PisteView.swift in Sources */,
 				8BF1C42D236E300700F310F0 /* ActivityIndicator.swift in Sources */,
 				8BF1C433236E305B00F310F0 /* TakePhotoView.swift in Sources */,
 				8BDD4CF0236F381700579094 /* PrivacyPolicyView.swift in Sources */,
+				8BC2BCAD23892DCB0040BAE9 /* ScanQRButton.swift in Sources */,
 				8BF1C435236E310800F310F0 /* CameraView.swift in Sources */,
 				8BE30403236E07BD00EBDC44 /* Piste.swift in Sources */,
 				8BE303E4236E010700EBDC44 /* SceneDelegate.swift in Sources */,
 				8BDD4CEC236F15D100579094 /* ProfileVM.swift in Sources */,
+				8BC2BCAF23893DBB0040BAE9 /* Colors.swift in Sources */,
 				8BF1C428236E2AF800F310F0 /* Date+Extensions.swift in Sources */,
 				8BE3040D236E14C800EBDC44 /* LogView.swift in Sources */,
 				8BF1C42A236E2FAD00F310F0 /* LogbookDetailsView.swift in Sources */,

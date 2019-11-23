@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Plaine Morte",
     "imgName": "PlaineMorte",
-    "difficulty": "difficult",
+    "difficulty": "hard",
     "vertical": 123.5,
     "distance": 1.5
   },
@@ -22,5 +22,21 @@
     "difficulty": "easy",
     "vertical": 73.5,
     "distance": 3.4
+  },
+  {
+    "id": 4,
+    "name": "Kodak",
+    "imgName": "Kodak",
+    "difficulty": "hard",
+    "vertical": 130.2,
+    "distance": 6
+  },
+  {
+    "id": 5,
+    "name": "Snow Park",
+    "imgName": "EasySP",
+    "difficulty": "easy",
+    "vertical": 22,
+    "distance": 2.2
   }
 ]

@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 
 enum Difficulty: String, Codable {
-  case easy, intermediate, difficult
+  case easy, intermediate, hard
   
   var color: Color {
     switch self {
@@ -18,7 +18,7 @@ enum Difficulty: String, Codable {
         return Color.blue
       case .intermediate:
         return Color.red
-      case .difficult:
+      case .hard:
         return Color.black
     }
   }

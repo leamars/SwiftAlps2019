@@ -39,22 +39,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3E429569-10D7-4617-B80E-C97BD2662A5F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TastySlopes/UI/TabNavView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "tastyView"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "AEC4164B-1514-4E6F-80E6-FBD99FC631F8"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -64,8 +48,56 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
             endingLineNumber = "22"
-            landmarkName = "updateUser(updatedUser:)"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "89E9C845-92FC-4F83-8FC5-9FA2012ED057"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TastySlopes/UI/UIKit/LogbookView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "treatView(treat:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "89E9C845-92FC-4F83-8FC5-9FA2012ED057 - e9c8c39fef2adf4a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TastySlopes.LogbookView.(treatView in _C55625C03FF3422AEFFAA06E0794CCE7)(treat: TastySlopes.Treat) -&gt; some"
+                  moduleName = "TastySlopes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lea/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/Desktop%20%E2%80%93%20Lea%E2%80%99s%20MacBook%20Pro/Github/SwiftAlps/TastySlopes/TastySlopes/UI/UIKit/LogbookView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "95">
+               </Location>
+               <Location
+                  uuid = "89E9C845-92FC-4F83-8FC5-9FA2012ED057 - e9c8c39fef2adf4a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TastySlopes.LogbookView.(treatView in _C55625C03FF3422AEFFAA06E0794CCE7)(treat: TastySlopes.Treat) -&gt; some"
+                  moduleName = "TastySlopes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lea/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/Desktop%20%E2%80%93%20Lea%E2%80%99s%20MacBook%20Pro/Github/SwiftAlps/TastySlopes/TastySlopes/UI/UIKit/LogbookView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "338">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
