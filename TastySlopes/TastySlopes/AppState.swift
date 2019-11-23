@@ -14,12 +14,30 @@ class AppState: ObservableObject {
   @Published var user: User
   @Published var selectedTab = 2
   
+  var logsVM: LogsVM
+  var profileVM: ProfileVM
+  
   init() {
-    self.user = UserDefaults.standard.user ?? User.emptyUser
+    let user = UserDefaults.standard.user ?? User.emptyUser
+    
+    self.user = user
+    self.logsVM = LogsVM(user: user)
+    self.profileVM = ProfileVM(user: user)
   }
   
-  func updateUser(updatedUser: User) {
-    user = updatedUser
-    UserDefaults.standard.saveUser(newUser: updatedUser)
+  func updateProfile(age: Int, weight: Int, height: Int, gender: Gender, active: Bool) {
+    user.age = age
+    user.weight = weight
+    user.height = height
+    user.gender = gender
+    user.activeLifestyle = active
+    
+    UserDefaults.standard.saveUser(newUser: user)
+  }
+  
+  func updateLogs(logs: [LogModel]) {
+    user.logs = logs
+    
+    UserDefaults.standard.saveUser(newUser: user)
   }
 }

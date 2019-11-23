@@ -10,7 +10,6 @@ import SwiftUI
 
 struct CameraView: View {
   
-  @EnvironmentObject var logbookVM: LogbookVM
   @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
   @State var isPresented: Bool
   
@@ -20,7 +19,7 @@ struct CameraView: View {
     }
     
     // ISSUE (2): Not sure why we need to pass the environment object (maybe because this is not technically a "child", but a sheet/modifier?)
-    return TakePhotoView(isDisplayed: $isPresented).environmentObject(self.logbookVM)
+    return TakePhotoView(isDisplayed: $isPresented)
   }
 }
 

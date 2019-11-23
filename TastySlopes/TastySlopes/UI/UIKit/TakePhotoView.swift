@@ -10,7 +10,7 @@ import SwiftUI
 import CoreImage
 
 struct TakePhotoView: UIViewControllerRepresentable {
-  @EnvironmentObject var logbookVM: LogbookVM
+  @EnvironmentObject var logsVM: LogsVM
   @Binding var isDisplayed: Bool
   
   final class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -60,7 +60,7 @@ struct TakePhotoView: UIViewControllerRepresentable {
   
   func makeCoordinator() -> Coordinator {
     return Coordinator(isDisplayed: self._isDisplayed, successfulScanClosure: { id in
-      self.logbookVM.logPiste(with: id)
+      self.logsVM.logPiste(id: id)
     })
   }
 }

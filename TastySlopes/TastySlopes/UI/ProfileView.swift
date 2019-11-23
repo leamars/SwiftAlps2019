@@ -11,17 +11,14 @@ import SwiftUI
 struct ProfileView: View {
   @EnvironmentObject private var appState: AppState
   @ObservedObject var profileVM: ProfileVM
-    
-  @State private var selectedUnits = 0
-  @State private var measurementSystems = ["Metric", "Imperial"]
   @State var showingMissingDetailsAlert = false
     
   var body: some View {
     return Form {
       Section(header: Text("Personal Info")) {
         Picker(selection: $profileVM.gender, label: Text("Select a color")) {
-          ForEach(0 ..< profileVM.allGenders.count) {
-            Text(self.profileVM.allGenders[$0]).tag($0)
+          ForEach(0 ..< Gender.allStrings.count) {
+            Text(Gender.allStrings[$0]).tag($0)
           }
         }
         .pickerStyle(SegmentedPickerStyle())
@@ -34,14 +31,13 @@ struct ProfileView: View {
       }
       
       Section(header: Text("Measurements")) {
-        unitsHeader
-        measureField(title: "Weight", binding: $profileVM.weightStr, append: self.selectedUnits == 0 ? "kg" : "lbs")
-        measureField(title: "Height", binding: $profileVM.heightStr, append: self.selectedUnits == 0 ? "cm" : "inch")
+        measureField(title: "Weight", binding: $profileVM.weightStr, append: "kg")
+        measureField(title: "Height", binding: $profileVM.heightStr, append: "cm")
       }
       
       Section(footer: Text("Note: Calorie consumption is calculated based on BMI, age and general fitness activity.")) {
         Button(action: {
-          self.dismissKeyboard()
+          self.updateProfile()
         }) {
           Text("Update profile")
         }
@@ -63,53 +59,30 @@ struct ProfileView: View {
     }
   }
   
-  private var unitsHeader: some View {
-    GeometryReader { geometry in
-      HStack(alignment: .center) {
-        
-        Text("Units")
-        
-        Spacer()
-        
-        self.unitPicker
-          .frame(width: geometry.size.width/1.5)
-        
-      }
-    }
-  }
-  
-  private var unitPicker: some View {
-    Picker(selection: $selectedUnits, label: Text("Units")) {
-      ForEach(0 ..< measurementSystems.count) {
-        Text(self.measurementSystems[$0]).tag($0)
-      }
-    }
-    .pickerStyle(SegmentedPickerStyle())
-  }
-  
   private func measureField(title: String, binding: Binding<String>, append: String) -> some View {
     HStack {
       TextField(title, text: binding)
-        .keyboardType(.numberPad)
+        .keyboardType(.numbersAndPunctuation)
       
       Text(append)
     }
   }
   
-  private func dismissKeyboard() {
+  private func updateProfile() {
     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     
-    guard let user = profileVM.newUser() else {
+    guard let user = profileVM.updatedUser() else {
       showingMissingDetailsAlert.toggle()
       return
     }
-    appState.updateUser(updatedUser: user)
+    
+    appState.updateProfile(age: user.age, weight: user.weight, height: user.height, gender: user.gender, active: user.activeLifestyle)
   }
   
   private var missingDetailsAlert: Alert {
     return Alert(
       title: Text("Missing details!"),
-      message: Text("Make sure to fill out all your details, otherwise we can't calculate your recommended daily caloric intake."),
+      message: Text("Make sure to fill out all your details, otherwise we can't calculate how many treats you deserve!r"),
       dismissButton:
         .default(Text("OK"), action: {
           self.showingMissingDetailsAlert.toggle()

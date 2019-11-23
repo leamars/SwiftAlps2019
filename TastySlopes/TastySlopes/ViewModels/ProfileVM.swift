@@ -17,7 +17,8 @@ class ProfileVM: ObservableObject {
   @Published var heightStr: String  = ""
   @Published var gender: Int  = 0
   @Published var activeLifestyle: Bool  = false
-  var allGenders: [String] = Gender.allStrings
+  
+  lazy var allGenders: [String] = Gender.allStrings
   
   private var user: User?
   
@@ -36,15 +37,15 @@ class ProfileVM: ObservableObject {
     self.activeLifestyle = user.activeLifestyle
   }
   
-  func newUser() -> User? {
+  func updatedUser() -> User? {
     guard let gender = Gender(rawValue: allGenders[gender]),
-      let weight = Int(weightStr),
-      let height = Int(heightStr),
-      let age = Int(ageStr) else {
+      let weight = Int(weightStr), weight != 0,
+      let height = Int(heightStr), height != 0,
+      let age = Int(ageStr), age != 0 else {
         return nil
     }
     
-    let user = User(gender: gender, age: age, weight: weight, height: height, runs: 0, timeOnRuns: 0, lifetimeVertical: 0, activeLifestyle: activeLifestyle)
+    let user = User(gender: gender, age: age, weight: weight, height: height, logs: [], activeLifestyle: activeLifestyle)
     return user
   }
 }

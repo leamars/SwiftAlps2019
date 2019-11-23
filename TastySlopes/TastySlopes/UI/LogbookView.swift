@@ -11,7 +11,7 @@ import SwiftUI
 struct LogbookView: View {
   
   @EnvironmentObject private var appState: AppState
-  @EnvironmentObject var logbookVM: LogbookVM
+  @ObservedObject var logsVM: LogsVM
   @State private var cameraPresented: Bool = false
   
   var body: some View {
@@ -20,11 +20,9 @@ struct LogbookView: View {
         addPisteRun
         .padding()
         .background(Color("lightBG"))
-        
-        treats
-        
+                
         List {
-          ForEach(logbookVM.data, id: \.id) { model in
+          ForEach(logsVM.logs, id: \.id) { model in
             LogView(model: model)
           }
           .onDelete(perform: self.delete)
@@ -33,13 +31,13 @@ struct LogbookView: View {
       .navigationBarTitle(Text("Logbook"))
       .sheet(isPresented: $cameraPresented) {
         // ISSUE (1): Not sure why we need to pass the environment object (maybe because this is not technically a "child", but a sheet/modifier?)
-        CameraView(isPresented: self.cameraPresented).environmentObject(self.logbookVM)
+        CameraView(isPresented: self.cameraPresented).environmentObject(self.logsVM)
     }
   }
   
   private var addPisteRun: some View {
     let pistes = Piste.pistes
-    return ScrollView(.horizontal, showsIndicators: false) {
+    let scrollView = ScrollView(.horizontal, showsIndicators: false) {
       HStack(alignment: .center) {
         ForEach(pistes, id: \.id) { piste in
           PisteView(piste: piste)
@@ -49,40 +47,52 @@ struct LogbookView: View {
         }
       }
     }
+    return VStack {
+      scrollView
+      Divider()
+      treats
+    }
   }
   
   private func treatView(treat: Treat) -> some View {
-    let numTreats = Int(appState.user.maintenanceCalories / treat.calories)
-    return VStack {
-      Text("\(treat.rawValue): ")
+    let numTreats = Int(logsVM.caloriesSpent / treat.calories)
+    return HStack {
+      Text("\(treat.rawValue.uppercased()): ")
+        .font(.footnote)
+            
       ScrollView(.horizontal, showsIndicators: false) {
-        HStack(alignment: .center) {
-         Image(treat.img)
+        HStack {
+          ForEach((0...numTreats), id: \.self) { _ in
+            Image(treat.img)
+            .resizable()
+            .frame(width: 25, height: 25)
+          }
         }
       }
     }
   }
   
   private var treats: some View {
-    return VStack {
+    return VStack(alignment: .leading, spacing: 8) {
       treatView(treat: .toblerone)
       treatView(treat: .swissCheese)
     }
   }
   
   private func addRunForPiste(piste: Piste) {
-    logbookVM.logPiste(with: piste.id)
+    logsVM.logPiste(id: piste.id)
+    appState.updateLogs(logs: logsVM.logs)
   }
   
   private func delete(indexSet: IndexSet) {
     guard let index = indexSet.first else { return }
-    logbookVM.data.remove(at: index)
+    logsVM.logs.remove(at: index)
+    appState.updateLogs(logs: logsVM.logs)
   }
 }
 
 struct LogbookView_Previews: PreviewProvider {
   static var previews: some View {
-    let logbookVM = LogbookVM()
-    return LogbookView().environmentObject(logbookVM)
+    return LogbookView(logsVM: LogsVM(user: nil))
   }
 }

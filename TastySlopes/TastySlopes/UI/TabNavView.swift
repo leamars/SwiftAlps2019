@@ -10,16 +10,14 @@ import SwiftUI
 
 struct TabNavView: View {
   @EnvironmentObject private var appState: AppState
-  @EnvironmentObject private var treatsVM: TreatsVM
-  private var logbookVM = LogbookVM()
   
   var body: some View {
     TabView(selection: $appState.selectedTab) {
       
       NavigationView {
-        treatsView
+        profileView
       }.tabItem {
-        Text("Treats")
+        Text("Profile")
       }.tag(0)
       
       NavigationView {
@@ -27,26 +25,17 @@ struct TabNavView: View {
       }.tabItem {
         Text("Logbook")
       }.tag(1)
-      
-      NavigationView {
-        profileView
-      }.tabItem {
-        Text("Profile")
-      }.tag(2)
     }
   }
   
   private var logbookView: some View {
-    return LogbookView().environmentObject(logbookVM).environmentObject(appState)
+    return LogbookView(logsVM: LogsVM(user: appState.user))
   }
   
   private var profileView: some View {
     return ProfileView(profileVM: ProfileVM(user: appState.user))
   }
   
-  private var treatsView: some View {
-    return TreatsView(treatsVM: treatsVM).environmentObject(appState)
-  }
 }
 
 struct TabNavView_Previews: PreviewProvider {

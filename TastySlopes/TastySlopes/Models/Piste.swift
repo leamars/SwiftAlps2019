@@ -22,6 +22,17 @@ enum Difficulty: String, Codable {
         return Color.black
     }
   }
+  
+  var metValue: Double {
+    switch self {
+      case .easy:
+        return 6
+      case .intermediate:
+        return 7
+      case .hard:
+        return 8
+    }
+  }
 }
 
 struct Piste: Codable, Identifiable {
@@ -53,7 +64,7 @@ struct Piste: Codable, Identifiable {
   }
 }
 
-struct Run {
+struct Run: Codable {
   var time: Int // Seconds
   var speed: Double // 17.mph
   var date: Date

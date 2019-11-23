@@ -17,7 +17,7 @@ enum Gender: String, CaseIterable, Codable {
   static var allStrings: [String] {
     return [Gender.female, .male, .nonConforming].map { $0.rawValue }
   }
-  
+    
   var index: Int {
     switch self {
       case .female: return 0
@@ -68,21 +68,26 @@ struct User: Codable {
   var age: Int
   var weight: Int
   var height: Int
-  var runs: Int // Num of runs
-  var timeOnRuns: Double // Seconds
-  var lifetimeVertical: Double
+  var logs: [LogModel]
   var activeLifestyle: Bool
  
-  var maintenanceCalories: Int {
+  var caloriesSpentToday: Int {
     guard weight != 0, height != 0, age != 0 else { return 0 }
     
     let bmr = gender.k + (gender.weightMult * Double(weight)) + (gender.heightMult * Double(height)) + (gender.ageMult * Double(age))
-    let activityMultiplier = activeLifestyle ? 1.25 : 1.0
+    let activityMultiplier = (activeLifestyle ? 1.25 : 1.0) // 8 = Skiing MET; https://www.brianmac.co.uk/mets.htm
+    let caloriesSpentPerDay = bmr * activityMultiplier
+    let caloriesSpentPerMinute: Double = caloriesSpentPerDay / (24 * 60)
     
-    return Int(bmr * activityMultiplier)
+    let caloriesSpentSkiing = logs.reduce(0) { (sum, model) -> Int in
+      let calories = caloriesSpentPerMinute * model.piste.difficulty.metValue * model.run.time.minutesFromSeconds
+      return sum + Int(calories)
+    }
+    
+    return caloriesSpentSkiing
   }
   
   static var emptyUser: User {
-    return User(gender: .nonConforming, age: 0, weight: 0, height: 0, runs: 0, timeOnRuns: 0, lifetimeVertical: 0, activeLifestyle: false)
+    return User(gender: .nonConforming, age: 0, weight: 0, height: 0, logs: [], activeLifestyle: false)
   }
 }
