@@ -9,15 +9,15 @@
 import SwiftUI
 
 struct LogbookView: View {
-  
+
   private var pistes = Piste.pistes
-  
+
   var body: some View {
     pistePicker
     .padding()
     .background(Color("lightBG"))
   }
-  
+
   var pistePicker: some View {
     ScrollView(.horizontal, showsIndicators: false) {
       HStack(alignment: .center) {

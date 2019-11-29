@@ -19,7 +19,7 @@ struct ProfileView: View {
       Section(header: Text("Personal Info")) {
         Picker(selection: $profileVM.gender, label: Text("Select your gender")) {
           ForEach(0 ..< Gender.allStrings.count) {
-            Text(Gender.allStrings[$0]).tag($0)
+            Text(Gender.allStrings[$0])
           }
         }
         .pickerStyle(SegmentedPickerStyle())
