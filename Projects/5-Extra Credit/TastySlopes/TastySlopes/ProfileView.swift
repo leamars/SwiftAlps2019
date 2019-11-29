@@ -17,7 +17,7 @@ struct ProfileView: View {
   var body: some View {
     return Form {
       Section(header: Text("Personal Info")) {
-        Picker(selection: $profileVM.gender, label: Text("Select a color")) {
+        Picker(selection: $profileVM.gender, label: Text("Select your gender")) {
           ForEach(0 ..< Gender.allStrings.count) {
             Text(Gender.allStrings[$0]).tag($0)
           }
@@ -96,7 +96,7 @@ struct ProfileView: View {
   private var missingDetailsAlert: Alert {
     return Alert(
       title: Text("Missing details!"),
-      message: Text("Make sure to fill out all your details, otherwise we can't calculate how many treats you deserve!r"),
+      message: Text("Make sure to fill out all your details, otherwise we can't calculate how many treats you deserve!"),
       dismissButton:
       .default(Text("OK"), action: {
         self.showingMissingDetailsAlert.toggle()

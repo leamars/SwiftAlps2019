@@ -15,7 +15,7 @@ struct ProfileView: View {
   var body: some View {
     return Form {
       Section(header: Text("Personal Info")) {
-        Picker(selection: $profileVM.gender, label: Text("Select a color")) {
+        Picker(selection: $profileVM.gender, label: Text("Select a gender")) {
           ForEach(0 ..< Gender.allStrings.count) {
             Text(Gender.allStrings[$0]).tag($0)
           }
