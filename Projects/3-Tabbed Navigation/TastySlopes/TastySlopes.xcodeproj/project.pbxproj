@@ -13,7 +13,7 @@
 		8B3F8CFE238FFDFB00812948 /* LogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F8CFD238FFDFB00812948 /* LogView.swift */; };
 		8B3F8D00238FFF4D00812948 /* TabNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F8CFF238FFF4D00812948 /* TabNavView.swift */; };
 		8B3F8D02238FFFB700812948 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F8D01238FFFB700812948 /* ProfileView.swift */; };
-		8B45734F238D197E00D82B36 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B45734E238D197E00D82B36 /* PrivacyPolicyView.swift */; };
+		8B7F869C23914CD500219211 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F869B23914CD500219211 /* PrivacyPolicyView.swift */; };
 		8B871E7B23898E7F0076CC03 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B871E7A23898E7F0076CC03 /* Log.swift */; };
 		8B871E7D23899CA70076CC03 /* Piste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B871E7C23899CA70076CC03 /* Piste.swift */; };
 		8B871E7F23899CB70076CC03 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B871E7E23899CB70076CC03 /* Run.swift */; };
@@ -37,7 +37,7 @@
 		8B3F8CFD238FFDFB00812948 /* LogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogView.swift; sourceTree = "<group>"; };
 		8B3F8CFF238FFF4D00812948 /* TabNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavView.swift; sourceTree = "<group>"; };
 		8B3F8D01238FFFB700812948 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		8B45734E238D197E00D82B36 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PrivacyPolicyView.swift; path = ../PrivacyPolicyView.swift; sourceTree = "<group>"; };
+		8B7F869B23914CD500219211 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
 		8B871E7A23898E7F0076CC03 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		8B871E7C23899CA70076CC03 /* Piste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Piste.swift; sourceTree = "<group>"; };
 		8B871E7E23899CB70076CC03 /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
@@ -75,10 +75,10 @@
 			path = "View Models";
 			sourceTree = "<group>";
 		};
-		8B3F8CF6238FA5B400812948 /* Views */ = {
+		8B7F869A23914CC800219211 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8B45734E238D197E00D82B36 /* PrivacyPolicyView.swift */,
+				8B7F869B23914CD500219211 /* PrivacyPolicyView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -110,7 +110,7 @@
 				8B3F8CFB238FFC9C00812948 /* PisteView.swift */,
 				8B3F8CFD238FFDFB00812948 /* LogView.swift */,
 				8B3F8D01238FFFB700812948 /* ProfileView.swift */,
-				8B3F8CF6238FA5B400812948 /* Views */,
+				8B7F869A23914CC800219211 /* Views */,
 				8B06E8E8238BD60900880663 /* View Models */,
 				8BF1C426236E2AE700F310F0 /* Helpers */,
 				8BE303FF236E079100EBDC44 /* Models */,
@@ -224,12 +224,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B7F869C23914CD500219211 /* PrivacyPolicyView.swift in Sources */,
 				8BE303E2236E010700EBDC44 /* AppDelegate.swift in Sources */,
 				8BE303E4236E010700EBDC44 /* SceneDelegate.swift in Sources */,
 				8B3F8D00238FFF4D00812948 /* TabNavView.swift in Sources */,
 				8BDA91802389569C00E0EE29 /* TimeInterval+Extensions.swift in Sources */,
 				8B871E7F23899CB70076CC03 /* Run.swift in Sources */,
-				8B45734F238D197E00D82B36 /* PrivacyPolicyView.swift in Sources */,
 				8B06E8E7238B706600880663 /* AppState.swift in Sources */,
 				8B3F8CFC238FFC9C00812948 /* PisteView.swift in Sources */,
 				8BE30401236E07AB00EBDC44 /* User.swift in Sources */,
