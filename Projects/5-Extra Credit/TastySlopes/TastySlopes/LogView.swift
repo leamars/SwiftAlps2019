@@ -11,7 +11,10 @@ import SwiftUI
 struct LogView: View {
   var model: Log
   
+  var logs = [Log]
+  
   var body: some View {
+
     HStack(alignment: .top) {
       
       Image("\(model.piste.imgName)")
