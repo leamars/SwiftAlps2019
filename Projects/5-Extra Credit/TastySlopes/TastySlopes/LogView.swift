@@ -8,10 +8,28 @@
 
 import SwiftUI
 
+struct Flower: Identifiable {
+  var id: Int
+  var name: String
+}
+
+struct FlowerView: View {
+  var flowers: [Flower]
+  
+  var body: some View {
+    ForEach(flowers, id: \.id) { flower in
+      Text(flower.name)
+    }
+  }
+}
+
 struct LogView: View {
   var model: Log
   
+  var logs = [Log]
+  
   var body: some View {
+
     HStack(alignment: .top) {
       
       Image("\(model.piste.imgName)")
